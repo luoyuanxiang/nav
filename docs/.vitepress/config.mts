@@ -4,6 +4,7 @@ import {defineConfig} from 'vitepress'
 export default defineConfig({
     title: "导航",
     description: "",
+    base: "/nav/",
     themeConfig: {
         logo: "/logo.png",
         outline: {
