@@ -5,8 +5,8 @@
         <div class="flink-desc">{{ item.desc }}</div>
         <div class="flink-list">
           <div v-for="(item2, index2) in item.items" :key="index2" class="flink-list-item"><a :href="item2.link"
-              :title="item2.title" rel="external nofollow" target="_blank"><img :data-lazy-src="item2.icon"
-                :src="item2.icon" alt="chatGPT" class="flink-avatar entered loaded" data-ll-status="loaded"
+              :title="item2.title" rel="external nofollow" target="_blank"><img :data-lazy-src="withBase(item2.icon)"
+                :src="withBase(item2.icon)" alt="chatGPT" class="flink-avatar entered loaded" data-ll-status="loaded"
                 onerror="this.onerror=null;this.src='https://bu.dusays.com/2023/03/03/6401a7902b8de.png'">
               <div class="img-alt is-center">{{ item2.title }}</div>
               <div class="flink-item-info"><span class="flink-item-name">{{ item2.title }}</span><span :title="item2.desc"
@@ -21,6 +21,7 @@
 <script lang="ts" setup>
   import { NAV_DATA } from '../utils/data-ahua'
   import {NavData} from '../utils/types'
+  import {withBase} from 'vitepress'
   const datas: NavData[] = NAV_DATA
 </script>
 

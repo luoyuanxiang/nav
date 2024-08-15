@@ -3,7 +3,7 @@ import DefaultTheme from 'vitepress/theme'
 import {h} from 'vue'
 import {useData} from 'vitepress'
 
-import NavLink from './components/NavLink.vue'
+import NavLinks from './components/NavLink.vue'
 
 export default {
     extends: DefaultTheme,
@@ -19,6 +19,6 @@ export default {
     },
     enhanceApp({app}) {
         // 注册组件
-        app.component('NavLink', NavLink)
+        app.component('NavLinks', NavLinks)
     },
 }
